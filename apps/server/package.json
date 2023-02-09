@@ -2,7 +2,6 @@
     "name": "@teamlearns/server",
     "description": "Server for running several web applications",
     "version": "1.0.0",
-    "license": "MIT",
     "scripts": {
         "dev": "cross-env PAYLOAD_CONFIG_PATH=../cms/src/payload.config.ts NODE_ENV=development nodemon",
         "build:server": "rm -rf dist/* && tsc -p tsconfig.build.json",
