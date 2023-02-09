@@ -6,7 +6,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-.pnpm-debug.log*
+.npm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -70,9 +70,6 @@ web_modules/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
-.yarn-integrity
-
 # dotenv environment variable files
 .env
 .env.development.local
@@ -122,13 +119,6 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-# yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
-
 ### Node Patch ###
 # Serverless Webpack directories
 .webpack/
@@ -164,3 +154,5 @@ dist
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
+
+src/media

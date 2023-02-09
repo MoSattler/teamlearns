@@ -2,9 +2,9 @@ import path = require('path');
 import fs = require('fs');
 
 import express = require('express');
-import cms = require('@org/cms');
+import cms = require('@teamlearns/cms');
 import shared = require('@org/shared');
-import webExpressAdapter = require('@org/web/express');
+import webExpressAdapter = require('@teamlearns/web/express');
 
 const { payload } = cms;
 const { dotenv } = shared;
@@ -66,7 +66,7 @@ payload.init({
     },
 });
 
-app.use(payload.authenticate);
+// app.use(payload.authenticate);
 
 app.all(
     '*',

@@ -1,10 +1,8 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-    ignoredRouteFiles: ['**/.*'],
-    assetsBuildDirectory: 'public/web/build',
-    publicPath: '/web/build/',
-    serverDependenciesToBundle: ['@org/ui'],
-    // appDirectory: "app",
-    // serverBuildPath: "build/index.js",
-    watchPaths: ['../../packages/ui', '../../packages/shared'],
+  ignoredRouteFiles: ["**/.*"],
+  // appDirectory: "app",
+  // assetsBuildDirectory: "public/build",
+  // serverBuildPath: "build/index.js",
+  // publicPath: "/build/",
 };
