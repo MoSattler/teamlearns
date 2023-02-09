@@ -6,13 +6,7 @@
             "dependsOn": ["^build"],
             "outputs": ["dist/**", "build/**"]
         },
-        "lint": {
-            "outputs": []
-        },
         "dev": {
-            "cache": false
-        },
-        "clean": {
             "cache": false
         },
         "serve": {

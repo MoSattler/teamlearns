@@ -4,12 +4,10 @@
     "version": "1.0.0",
     "license": "MIT",
     "scripts": {
-        "clean": "rm -rf node_modules build dist .turbo",
         "dev": "cross-env PAYLOAD_CONFIG_PATH=../cms/src/payload.config.ts NODE_ENV=development nodemon",
         "build:server": "rm -rf dist/* && tsc -p tsconfig.build.json",
         "build": "pnpm build:server",
-        "serve": "cross-env PAYLOAD_CONFIG_PATH=../cms/dist/payload.config.js NODE_ENV=production node --conditions=serve dist/index.js",
-        "lint": "eslint --ext .ts,.js ./index.ts"
+        "serve": "cross-env PAYLOAD_CONFIG_PATH=../cms/dist/payload.config.js NODE_ENV=production node --conditions=serve dist/index.js"
     },
     "dependencies": {
         "@teamlearns/cms": "workspace:*",

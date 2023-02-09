@@ -10,6 +10,10 @@
         "./express": {
             "import": "./express.js",
             "require": "./express.js"
+        },
+        "./build": {
+            "import": "./build",
+            "require": "./build"
         }
     },
     "scripts": {
