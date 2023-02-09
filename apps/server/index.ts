@@ -1,11 +1,14 @@
 import path = require('path');
-import fs = require('fs');
 
 import express = require('express');
 import cms = require('@teamlearns/cms');
 import webExpressAdapter = require('@teamlearns/web/express');
 import compression from 'compression';
 import morgan from 'morgan';
+import dotenv from 'dotenv'
+import invariant from "tiny-invariant";
+
+dotenv.config()
 
 const { payload } = cms;
 const { createRequestHandler } = webExpressAdapter;
@@ -16,11 +19,14 @@ const PUBLIC_DIR = path.join(process.cwd(), '../web/public');
 const PUBLIC_BUILD_DIR = path.join(process.cwd(), '../web/public/build');
 
 const start = async () => {
+    invariant(process.env.PAYLOAD_SECRET, "PAYLOAD_SECRET is required");
+    invariant(process.env.MONGODB_URI, "MONGODB_URI is required");
+
     const app = express();
 
     await payload.init({
-        mongoURL: 'mongodb://localhost/remix-server',
-        secret: 'asdasdasd',
+        secret: process.env.PAYLOAD_SECRET,
+        mongoURL: process.env.MONGODB_URI,
         express: app,
         onInit: () => {
             payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`);
